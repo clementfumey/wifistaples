@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+			 More info: h5bp.com/b/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Admin | Wifistaples</title>
+
+
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+			 However, there is a blank style.css in the css directory should you prefer -->
+	<link rel="stylesheet" href="css/gumby.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-2.6.2.min.js"></script>
+
+
+</head>
+<body>
+<div class="row">
+<form class = "twelve columns" method ="post" action = "admin.php" >
+    <div class="row">
+      <fieldset class="six columns">
+        <legend>Information Générales</legend>
+        <ul>
+          <li class="field">
+            <label class="inline" for="name">Nom de la course</label>
+            <input class="wide text input" id="name" name="name" type="text" placeholder="CFCO 2013 | MD" required/>
+          </li>
+          <li class="field">
+            <label class="inline">Format Course</label>
+            <div class="picker">
+                <select name="relay">
+                  <option value="false">Individuel</option>
+                  <option value="true">Relais</option>
+                </select>
+            </div>
+          </li>
+          <li class="field">
+            <label class="inline">Format résultats</label>
+            <div class="picker">
+                <select name="format">
+                  <option value="csv">CSV</option>
+                  <option value="xml">XML</option>
+                  <option value="html">HTML</option>
+                </select>
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="six columns">
+        <legend>Options (si disponible)</legend>
+            <div class="row">
+              <ul class="six columns">
+                <li class="field">
+                  <label class="checkbox" for="club">
+                    <input name="checkbox[]" id="club" value="club" type="checkbox">
+                    <span></span> Club
+                  </label>
+                  <label class="checkbox" for="nat">
+                    <input name="checkbox[]" id="nat" value="nat" type="checkbox" >
+                    <span></span> Nationalité
+                  </label>
+                  <label class="checkbox" for="si">
+                    <input name="checkbox[]" id="si" value="si" type="checkbox">
+                    <span></span> Sport-ident
+                  </label>
+                  <label class="checkbox" for="dos">
+                    <input name="checkbox[]" id="dos" value="dos" type="checkbox">
+                    <span></span> Dossard
+                  </label>
+                  <label class="checkbox" for="rel">
+                    <input name="checkbox[]" id="rel" value="rel" type="checkbox">
+                    <span></span> Relayeur
+                  </label>
+                </li>
+              </ul>
+              <ul class="six columns">
+                <li class="field">
+                  <label class="checkbox" for="start">
+                    <input name="checkbox[]" id="start" value="start" type="checkbox">
+                    <span></span> Heure de départ
+                  </label>
+                  <label class="checkbox" for="fin">
+                    <input name="checkbox[]" id="fin" value="fin" type="checkbox">
+                    <span></span> Heure d'arrivée
+                  </label>
+                  <label class="checkbox" for="rad">
+                    <input name="checkbox[]" id="rad" value="rad" type="checkbox">
+                    <span></span> Postes radios
+                  </label>
+                  <label class="checkbox" for="ecrad">
+                    <input name="checkbox[]" id="ecrad" value="ecrad" type="checkbox">
+                    <span></span> Ecarts radios
+                  </label>
+                  <label class="checkbox" for="plrad">
+                    <input name="checkbox[]" id="plrad" value="plrad" type="checkbox">
+                    <span></span> Places radios
+                  </label>
+                  <label class="checkbox" for="ecfin">
+                    <input name="checkbox[]" id="ecfin" value="ecfin" type="checkbox">
+                    <span></span> Ecarts finaux
+                  </label>
+                </li>
+              </ul>
+            </div>
+      </fieldset>
+    </div>
+    <div class="row">
+        <div class="large metro rounded btn default"><input name="submit" type="submit" value="Submit" /></div>
+    </div>
+</form>
+</div>
+	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+<!-- Include DataTables -->
+    <script src="js/libs/gumby.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+
+  <!--
+  Include gumby.js followed by UI modules.
+  Or concatenate and minify into a single file
+  <script src="js/libs/gumby.js"></script>
+  <script src="js/libs/ui/gumby.retina.js"></script>
+  <script src="js/libs/ui/gumby.fixed.js"></script>
+  <script src="js/libs/ui/gumby.skiplink.js"></script>
+  <script src="js/libs/ui/gumby.toggleswitch.js"></script>
+  <script src="js/libs/ui/gumby.checkbox.js"></script>
+  <script src="js/libs/ui/gumby.radiobtn.js"></script>
+  <script src="js/libs/ui/gumby.tabs.js"></script>
+  <script src="js/libs/ui/gumby.navbar.js"></script>
+  <script src="js/libs/ui/jquery.validation.js"></script>
+  <script src="js/libs/gumby.init.js"></script>-->
+
+
+
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <!--<script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>-->
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  </body>
+</html>
+

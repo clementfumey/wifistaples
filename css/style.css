@@ -1,0 +1,83 @@
+/*
+We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+However, this blank file is available if you prefer
+*/
+
+/*.enhanced th{
+   display: none;
+}
+
+.enhanced th.essential{
+   display: table-cell;
+}
+
+@media screen and (min-width: 500px) {
+   .enhanced th.optional{
+      display: table-cell;
+   }
+}
+
+@media screen and (min-width: 800px) {
+   .enhanced th{
+      display: table-cell;
+   }
+}*/
+/*
+.table-menu-wrapper {
+   position: absolute;
+   top: -3em;
+   right: 0;
+}
+*/
+.table-menu {
+   position: absolute;
+   background-color: #fff;
+   padding: 10px;
+   border: 1px solid #ccc;
+   font-size: 1.2em;
+   width: 12em;
+}
+.table-menu-hidden {
+   left: -999em;
+   right: auto;
+}
+
+.table-wrapper {
+   position: relative;
+   margin: 5em 5%;
+}
+
+.navs .nav-content {
+    display: none;
+    padding: 20px 10px;
+}
+
+.navs .nav-content.active{
+    display: block;
+
+}
+.enhanced-tabs .enhanced-tab-content {
+    display: none;
+    padding: 20px 10px;
+}
+
+.enhanced-tabs .enhanced-tab-content.active{
+    display: block;
+
+}
+.enhanced-tabs { display: block; }
+.enhanced-tabs .enhanced-tab-nav { margin: 0; padding: 0;}
+.enhanced-tabs .enhanced-tab-nav > li { display: inline-block; width: auto; padding: 0; margin: 4px 0 0 0 ; cursor: default; top: 1px;}
+.enhanced-tabs .enhanced-tab-nav > li > a { display: block; width: auto; padding: 0 16px; margin: 0; color: #555555; font-family: "Open Sans"; font-weight: 600; border: 1px solid #e5e5e5; border-width: 1px; text-shadow: 0 1px 1px white; background: #f2f2f2; cursor: pointer; height: 42px; line-height: 40px; }
+.enhanced-tabs .enhanced-tab-nav > li > a:hover { text-decoration: none; background: whitesmoke; }
+.enhanced-tabs .enhanced-tab-nav > li > a:active { background: #ededed; }
+.enhanced-tabs .enhanced-tab-nav > li.active > a { height: 43px; line-height: 41px; background: white; }
+
+
+h1.logo{
+    margin-left: 10%;
+    font-size: 40px;
+    font-size: 2.50rem;
+    color: white;
+}
+
